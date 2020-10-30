@@ -13,6 +13,14 @@ last_modified_date: 2020-04-27T17:54:08+0000
 
 # J*: A Lightweight Embeddable Scripting Language
 
+<p align="center">
+  <img src="https://bamless.github.io/jstar/assets/images/jstar350.png" alt="J* Programming Language" title="J* Programming Language">
+</p>
+
+![linux-build](https://github.com/bamless/jstar/workflows/linux-build/badge.svg)
+![windows-build](https://github.com/bamless/jstar/workflows/windows-build/badge.svg)
+![macos-build](https://github.com/bamless/jstar/workflows/macos-build/badge.svg)
+
 **J\*** is a dynamic embeddable scripting language designed to be as easy as possible to embed into
 another program. It arises from the need of having a modern scripting language with built-in
 support for OOP whilst mantaning simplicity of use and a low memory footprint. It can be viewed as 
@@ -35,23 +43,23 @@ among the language and host program, rendering embedding simple.
    **J\*** using the API, or by importing [C extensions](https://github.com/bamless/jsocket) 
    provided as dynamic libraries.
 
-To get a feel of the language, [try it in your browser](https://jstar-lang.github.io/docs/demo)!
+To get a feel of the language, [try it in your browser](https://bamless.github.io/jstar/demo)!
 
-# The **jstar** command line app
+# The **jstar** Command Line Interface
 
-Besides the language implementation, a simple executable called `jstar` is provided to start using
+Besides the language implementation, a simple command line interface called `jstar` is provided to start using
 the language without embedding it into another program.  
 If the `jstar` binary is executed without
 arguments it behaves like your usual read-eval-print loop, accepting a line at a time and executing
 it:
-```jstar
+```lua
 J*>> var helloWorld = 'Hello, World!'
 J*>> print(helloWorld)
 Hello, World!
 J*>> _
 ```
 You can even write multiline code, it will look like this:
-```jstar
+```lua
 J*>> for var i = 0; i < 3; i += 1 do
 ....   print('Hello, World!')
 .... end
@@ -65,7 +73,7 @@ When you eventually get bored, simply press Ctrl+d or Ctrl+c to exit the interpr
 If you instead want to execute code written in some file, you can pass it as an argument to `jstar`
 and it will be executed. Passing more than one argument causes all but the first to be forwarded to
 the language as **script arguments**. You can then read them from the script this way:
-```jstar
+```lua
 if #argv > 0 then
   print('First argument: ', argv[0])
 else
@@ -75,9 +83,9 @@ end
 The `jstar` executable can also accept various options that modify the behaviour of the command line
 app. To see all of them alongside a description, simply pass the `-h` option to the executable.
 
-In addition to being a useful tool to directly use the programming language, the command line app
+In addition to being a useful tool to directly use the programming language, the command line interface
 is also a good starting point to learn how **J\*** can be embedded in a program, as it uses the API
-to implement all of its functionalities. You can find the code in [**cli/src/cli.c**](https://github.com/bamless/jstar/blob/master/cli/src/cli.c).
+to implement all of its functionalities. You can find the code in [**cli/cli.c**](https://github.com/bamless/jstar/blob/master/cli/cli.c).
 
 # Binaries
 
@@ -89,11 +97,11 @@ Precompiled binaries are provided for Windows and Linux for every major release.
 The **J\*** library requires a C99 compiler and CMake (>= 3.9) to be built, and is known to compile 
 on OSX (Apple clang), Windows (both MSVC and MinGW-w64) and Linux (GCC, clang).
 
-To build the provided **command line app** `jstar`, a C++11 compiler is required as one of its
+To build the provided **command line interface** `jstar`, a C++11 compiler is required as one of its
 dependencies, linenoise-ng, is written in C++.
 
-Additionally, if one wishes to modify the standard library (**.jsr** files in jstar/src/builtin),
-a python interpreter (version >= 3) is required to generate header files from the code (CMake will
+Additionally, if one wishes to modify the standard library (**.jsr** files in src/std),
+a python interpreter (version >= 2.7) is required to generate header files from the code (CMake will
 automatically take care of this).
 
 You can clone the latest **J\*** sources using git:
@@ -102,13 +110,18 @@ You can clone the latest **J\*** sources using git:
 git clone https://github.com/bamless/jstar.git
 ```
 
-After cloning, use cmake to generate build files for your build system of choice and build the
-target `libjstar`/`libjstar_static` if you only want to generate the language dynamic/static library
-, or the `all` target if you want to build both the library and the command line app. On UNIX 
-systems this can be simply achieved by entering this in the command line:
+After cloning, use CMake to generate build files for your build system of choice and build the `all`
+target to generate the language dynamic/static libraries and the command line interface. On 
+UNIX-like systems this can be simply achieved by issuing this in the command line:
 
 ```
 cd jstar; mkdir build; cd build; cmake ..; make -j
+```
+
+Once the build process is complete, you can install **J\*** by typing:
+
+```
+sudo make install
 ```
 
 Various CMake options are available to switch on or off certain functionalities:
