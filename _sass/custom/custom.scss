@@ -1,0 +1,33 @@
+// Prism.js and code custom CSS
+
+pre {
+    border-radius: 3px;
+    border: 1px solid #eeebee;
+}
+
+code {
+    padding: 0;
+    border: 0;
+}
+
+// Custom CSS for demo page
+
+.editor {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    background-color: #f5f6fa;
+    border-radius: 3px;
+    border: 1px solid #eeebee;
+    font-size: 13px;
+    padding: 1em;
+}
+
+.codejar-linenumbers {
+    mix-blend-mode: normal !important;
+    color: $body-text-color !important;
+    background-color: #f5f6fa !important;
+    border-right: 1px solid #eeebee;
+}
+
+.error {
+    color: red;
+}
