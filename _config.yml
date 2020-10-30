@@ -22,8 +22,8 @@ title: J*
 email: mail@fabrizio-pietrucci.it
 description: >-
   A Lightweight Embeddable Scripting Language
-baseurl: "/docs"                 # the subpath of your site, e.g. /blog
-url: "https://bamless.github.io" # the base hostname & protocol for your site
+baseurl: "/jstar"                 # the subpath of your site, e.g. /blog
+url: "https://bamless.github.io/" # the base hostname & protocol for your site
 github_username:  bamless
 
 # Build settings
