@@ -26,4 +26,4 @@ Type your code here
 
 <p id="error-label" style="float: right; margin-top: 2em" hidden></p>
 <button type="button" id="run" class="btn btn-green">&#9654; Run</button>
-<pre class="editor" style="overflow-x: scroll; !important"><div id="output">[...]</div></pre>
+<pre class="editor" style="overflow-x: scroll;"><div id="output">[...]</div></pre>
