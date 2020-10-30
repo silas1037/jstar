@@ -13,14 +13,6 @@ last_modified_date: 2020-04-27T17:54:08+0000
 
 # J*: A Lightweight Embeddable Scripting Language
 
-<p align="center">
-  <img src="https://bamless.github.io/jstar/assets/images/jstar350.png" alt="J* Programming Language" title="J* Programming Language">
-</p>
-
-![linux-build](https://github.com/bamless/jstar/workflows/linux-build/badge.svg)
-![windows-build](https://github.com/bamless/jstar/workflows/windows-build/badge.svg)
-![macos-build](https://github.com/bamless/jstar/workflows/macos-build/badge.svg)
-
 **J\*** is a dynamic embeddable scripting language designed to be as easy as possible to embed into
 another program. It arises from the need of having a modern scripting language with built-in
 support for OOP whilst mantaning simplicity of use and a low memory footprint. It can be viewed as 
@@ -52,14 +44,14 @@ the language without embedding it into another program.
 If the `jstar` binary is executed without
 arguments it behaves like your usual read-eval-print loop, accepting a line at a time and executing
 it:
-```lua
+```jstar
 J*>> var helloWorld = 'Hello, World!'
 J*>> print(helloWorld)
 Hello, World!
 J*>> _
 ```
 You can even write multiline code, it will look like this:
-```lua
+```jstar
 J*>> for var i = 0; i < 3; i += 1 do
 ....   print('Hello, World!')
 .... end
@@ -73,7 +65,7 @@ When you eventually get bored, simply press Ctrl+d or Ctrl+c to exit the interpr
 If you instead want to execute code written in some file, you can pass it as an argument to `jstar`
 and it will be executed. Passing more than one argument causes all but the first to be forwarded to
 the language as **script arguments**. You can then read them from the script this way:
-```lua
+```jstar
 if #argv > 0 then
   print('First argument: ', argv[0])
 else
