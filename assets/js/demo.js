@@ -26,7 +26,7 @@ window.addEventListener("load", () => {
     function addErrorOutput(err) {
         err = err.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
                  .replace(/'/g, "&#039;").replace(/</g, "&lt;");
-        output.innerHTML += `<span class="error">${err}</span>`;
+        output.innerHTML += `<span class="demo-error">${err}</span>`;
     }
 
     function setEditorCode(source) {

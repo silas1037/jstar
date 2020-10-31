@@ -1,0 +1,33 @@
+.demo-editor {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    background-color: #f5f6fa;
+    border-radius: 3px;
+    border: 1px solid #eeebee;
+    font-size: 13px;
+    padding: 1em;
+    resize: none !important;
+}
+
+.codejar-linenumbers {
+    mix-blend-mode: normal !important;
+    color: #6a6d76ad !important;
+    background-color: #ebedf5 !important;
+    border: 1px solid #eeebee;
+    border-right: 1px solid #eeebee;
+    text-align: right;
+    padding-right: 0.7em;
+}
+
+.demo-output {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    background-color: #f5f6fa;
+    border-radius: 3px;
+    border: 1px solid #eeebee;
+    font-size: 13px;
+    overflow-x: auto;
+    padding: 1em;
+}
+
+.demo-error {
+    color: red;
+}

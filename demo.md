@@ -9,7 +9,7 @@ last_modified_date: 2020-04-27T17:54:08+0000
 
 <script src="{{ 'assets/js/codejar.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/linenumbers.js' | absolute_url }}"></script>
-<script src="{{ 'assets/js/jstar-demo.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/demo.js' | absolute_url }}"></script>
 
 Examples
 {: .text-delta }
@@ -22,7 +22,7 @@ Examples
 
 Type your code here
 {: .text-delta }
-<div class="editor language-jstar" id="input">print('Hello, World!')</div>
+<div class="demo-editor language-jstar" id="input">print('Hello, World!')</div>
 
 <p id="error-label" style="float: right; margin-top: 2em" hidden></p>
 <button type="button" id="run" class="btn btn-green">
