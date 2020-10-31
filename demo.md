@@ -7,7 +7,6 @@ permalink: /demo
 last_modified_date: 2020-04-27T17:54:08+0000
 ---
 
-<script src="{{ 'assets/js/codejar.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/linenumbers.js' | absolute_url }}"></script>
 <script src="{{ 'assets/js/demo.js' | absolute_url }}"></script>
 

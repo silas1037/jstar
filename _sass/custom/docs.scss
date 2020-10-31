@@ -1,0 +1,35 @@
+.snippet-style {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    background-color: #f5f6fa;
+    border-radius: 3px;
+    border: 1px solid #eeebee;
+    font-size: 13px;
+    tab-size: 4;
+    padding: 0.6em;
+}
+
+.snippet-buttons {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.snippet-style.snippet-editor {
+    resize: none !important;
+}
+
+.snippet-button {
+    background: none;
+    border: none;
+}
+
+.snippet-style.snippet-output {
+    padding: 0.5em;
+    margin-top: 0 !important;
+    margin-bottom: 0.25em;
+}
+
+.snippet-error {
+    color: red;
+}

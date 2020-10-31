@@ -1,3 +1,7 @@
+.runnable-snippet {
+    display: none;
+}
+
 .demo-editor {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
     background-color: #f5f6fa;
@@ -5,6 +9,7 @@
     border: 1px solid #eeebee;
     font-size: 13px;
     padding: 1em;
+    tab-size: 4;
     resize: none !important;
 }
 
@@ -26,6 +31,7 @@
     font-size: 13px;
     overflow-x: auto;
     padding: 1em;
+    tab-size: 4;
 }
 
 .demo-error {

@@ -3,6 +3,7 @@
 pre {
     border-radius: 3px;
     border: 1px solid #eeebee;
+    padding: 0.6em !important;
 }
 
 code {
@@ -10,4 +11,5 @@ code {
     border: 0;
 }
 
-@import "demo.scss"
+@import "docs.scss";
+@import "demo.scss";

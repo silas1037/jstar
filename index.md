@@ -11,6 +11,27 @@ last_modified_date: 2020-04-27T17:54:08+0000
 
 ---
 
+# Testing interactive code snippets
+
+This is a runnable hello world snippet:
+
+<pre class='runnable-snippet'>
+print('Hello, world!')
+</pre>
+
+This instead is another runnable snippet.  
+Take a look:
+
+<pre class='runnable-snippet'>
+print('Another snippet')
+</pre>
+
+This is a non-interactive snippet
+
+```jstar
+print('Can't run this!')
+```
+
 # J*: A Lightweight Embeddable Scripting Language
 
 **J\*** is a dynamic embeddable scripting language designed to be as easy as possible to embed into
