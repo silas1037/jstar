@@ -67,7 +67,7 @@ let loop = document.querySelector('#loop');
 loop.addEventListener('click', () => {
     setEditorCode(
 `for var i = 0; i < 10; i += 1 do
-print('Iteration {0}' % i)
+	print('Iteration {0}' % i)
 end`
     );
 });
@@ -76,24 +76,24 @@ let quick_sort = document.querySelector('#quick-sort');
 quick_sort.addEventListener('click', () => {
     setEditorCode(
 `fun partition(list, low, high)
-var pivot = list[high]
-var i = low
-for var j = low; j < high; j += 1 do
-    if list[j] <= pivot then
-        list[i], list[j] = list[j], list[i]
-        i += 1
-    end
-end
-list[i], list[high] = list[high], list[i]
-return i
+	var pivot = list[high]
+	var i = low
+	for var j = low; j < high; j += 1 do
+		if list[j] <= pivot then
+			list[i], list[j] = list[j], list[i]
+			i += 1
+		end
+	end
+	list[i], list[high] = list[high], list[i]
+	return i
 end
 
 fun quickSort(list, low, high)
-if low < high then
-    var p = partition(list, low, high)
-    quickSort(list, low, p - 1)
-    quickSort(list, p + 1, high)
-end
+	if low < high then
+		var p = partition(list, low, high)
+		quickSort(list, low, p - 1)
+		quickSort(list, p + 1, high)
+	end
 end
 
 var list = [9, 1, 36, 37, 67, 45, 11, 27, 3, 5]
@@ -109,9 +109,9 @@ regex.addEventListener('click', () => {
 
 var message = '{lang} on {platform}!'
 var formatted = re.gsub(message, '{(%a+)}', fun(arg)
-return { 
-        'lang' : 'J*', 'platform' : 'the Web'
-    }[arg]
+	return { 
+		'lang' : 'J*', 'platform' : 'the Web'
+	}[arg]
 end)
 
 print(formatted)`
