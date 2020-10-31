@@ -32,6 +32,29 @@ This is a non-interactive snippet
 print("Can't run this!")
 ```
 
+Calling J* from C:
+
+```c
+#include <stdlib.h>
+#include <stdio.h>
+
+#include <jstar/jstar.h>
+
+int main() {
+	JStarConf conf = jsrGetConf();
+	JStarVM *vm = jsrNewVM(&conf);
+
+	JStarResult res = jsrEvaluate(vm, "<string>", "print('Hello from C!')");
+	if(res != JSR_EVAL_SUCCESS) {
+		fprintf(stderr, "Error executing J* code: %d", res);
+		exit(EXIT_FAILURE);
+	}
+
+	jsrFreeVM(vm);
+	exit(EXIT_SUCCESS);
+}
+```
+
 # J*: A Lightweight Embeddable Scripting Language
 
 **J\*** is a dynamic embeddable scripting language designed to be as easy as possible to embed into

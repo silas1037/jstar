@@ -1,5 +1,7 @@
-pre {
+// Customize <pre> code snippets
+pre[class*="language-"] {
     border-radius: 3px;
+    background-color: #f5f6fc !important;
     border: 1px solid #eeebee;
     padding: 0.6em !important;
 }
