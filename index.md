@@ -142,7 +142,7 @@ automatically take care of this).
 
 You can clone the latest **J\*** sources using git:
 
-```
+```bash
 git clone https://github.com/bamless/jstar.git
 ```
 
@@ -150,13 +150,13 @@ After cloning, use CMake to generate build files for your build system of choice
 target to generate the language dynamic/static libraries and the command line interface. On 
 UNIX-like systems this can be simply achieved by issuing this in the command line:
 
-```
+```bash
 cd jstar; mkdir build; cd build; cmake ..; make -j
 ```
 
 Once the build process is complete, you can install **J\*** by typing:
 
-```
+```bash
 sudo make install
 ```
 
