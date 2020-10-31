@@ -29,6 +29,7 @@ function escapeString(str) {
         
         // Wrap all the snippet elements in a div
         let snippetWrap = document.createElement('div');
+        snippetWrap.className = 'snippet';
         snippetBlock.replaceWith(snippetWrap);
         snippetBlock = snippetWrap;
         
