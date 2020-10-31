@@ -46,7 +46,7 @@ int main() {
 
 	JStarResult res = jsrEvaluate(vm, "<string>", "print('Hello from C!')");
 	if(res != JSR_EVAL_SUCCESS) {
-		fprintf(stderr, "Error executing J* code: %d", res);
+		fprintf(stderr, "Error executing J* code: %d\n", res);
 		exit(EXIT_FAILURE);
 	}
 
