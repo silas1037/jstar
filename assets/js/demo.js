@@ -1,19 +1,22 @@
+// Code that implements the logic of the demo page.
+// Sets up the example buttons and the editor, as well as code execution.
+
 window.addEventListener("load", () => {
 
 // Demo elements and helper functions
-let input = document.querySelector("#input");
-let output = document.querySelector("#output");
-let error_label = document.querySelector("#error-label");
+let input = document.querySelector(".demo-editor");
+let output = document.querySelector(".demo-output");
+let errorLabel = document.querySelector(".demo-error-label");
 let editor = CodeJar(input, withLineNumbers(Prism.highlightElement));
 
 function setErrorLabel(message) {
-    error_label.innerText = message;
-    error_label.setAttribute('class', 'label label-red');
+    errorLabel.innerText = message;
+    errorLabel.setAttribute('class', 'label label-red demo-error-label');
 }
 
 function clearErrorLabel() {
-    error_label.innerText = '';
-    error_label.setAttribute('class', '');
+    errorLabel.innerText = '';
+    errorLabel.setAttribute('class', 'demo-error-label');
 }
 
 function clearOutput() {
@@ -38,8 +41,8 @@ function setEditorCode(source) {
 }
 
 // Button functionalities
-let run_btn = document.querySelector('#run');
-run_btn.addEventListener('click', () => {
+let runButton = document.querySelector('#run');
+runButton.addEventListener('click', () => {
     clearErrorLabel();
     clearOutput();
 
@@ -58,13 +61,13 @@ run_btn.addEventListener('click', () => {
 });
 
 // Example buttons
-let hello_world = document.querySelector('#hello-world');
-hello_world.addEventListener('click', () => {
+let helloWorldButton = document.querySelector('#hello-world');
+helloWorldButton.addEventListener('click', () => {
     setEditorCode(`print('Hello, World!')`);
 });
 
-let loop = document.querySelector('#loop');
-loop.addEventListener('click', () => {
+let loopButton = document.querySelector('#loop');
+loopButton.addEventListener('click', () => {
     setEditorCode(
 `for var i = 0; i < 10; i += 1 do
 	print('Iteration {0}' % i)
@@ -72,8 +75,8 @@ end`
     );
 });
 
-let quick_sort = document.querySelector('#quick-sort');
-quick_sort.addEventListener('click', () => {
+let quickSortButton = document.querySelector('#quick-sort');
+quickSortButton.addEventListener('click', () => {
     setEditorCode(
 `fun partition(list, low, high)
 	var pivot = list[high]
@@ -102,8 +105,8 @@ print(list)`
     );
 });
 
-let regex = document.querySelector('#regex');
-regex.addEventListener('click', () => {
+let regexButton = document.querySelector('#regex');
+regexButton.addEventListener('click', () => {
     setEditorCode(
 `import re
 

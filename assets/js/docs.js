@@ -1,3 +1,6 @@
+// Main script that gets included in all pages of the site.
+// It mainly processes `runnable-snippets` elements and sets up the logic to execute them.
+
 window.addEventListener('load', () => {
 
 function escapeString(str) {

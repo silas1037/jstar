@@ -1,8 +1,6 @@
-.runnable-snippet {
-    display: none;
-}
+// Custom styles for the `demo` page
 
-.demo-editor {
+.demo-style {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
     background-color: #f5f6fa;
     border-radius: 3px;
@@ -10,6 +8,9 @@
     font-size: 13px;
     padding: 1em;
     tab-size: 4;
+}
+
+.demo-editor {
     resize: none !important;
 }
 
@@ -24,16 +25,14 @@
 }
 
 .demo-output {
-    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
-    background-color: #f5f6fa;
-    border-radius: 3px;
-    border: 1px solid #eeebee;
-    font-size: 13px;
     overflow-x: auto;
-    padding: 1em;
-    tab-size: 4;
 }
 
 .demo-error {
     color: red;
+}
+
+.demo-error-label {
+    float: right; 
+    margin-top: 2em;
 }

@@ -19,7 +19,7 @@ This is a runnable hello world snippet:
 print('Hello, world!')
 </pre>
 
-This instead is another runnable snippet.  
+This also is a runnable snippet.  
 Take a look:
 
 <pre class='runnable-snippet'>
@@ -29,7 +29,7 @@ print('Another snippet')
 This is a non-interactive snippet
 
 ```jstar
-print('Can't run this!')
+print("Can't run this!")
 ```
 
 # J*: A Lightweight Embeddable Scripting Language

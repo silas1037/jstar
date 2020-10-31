@@ -1,3 +1,9 @@
+// Custom styles for all pages of the site
+
+.runnable-snippet {
+    display: none;
+}
+
 .snippet-style {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
     background-color: #f5f6fa;
@@ -15,7 +21,7 @@
     margin-right: 0;
 }
 
-.snippet-style.snippet-editor {
+.snippet-editor {
     resize: none !important;
 }
 
@@ -25,7 +31,7 @@
     color: #5c5962 !important;
 }
 
-.snippet-style.snippet-output {
+.snippet-output {
     padding: 0.5em;
     margin-top: 0 !important;
     margin-bottom: 0.25em;

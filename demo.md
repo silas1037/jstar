@@ -21,10 +21,10 @@ Examples
 
 Type your code here
 {: .text-delta }
-<div class="demo-editor language-jstar" id="input">print('Hello, World!')</div>
+<div class="demo-style demo-editor language-jstar">print('Hello, World!')</div>
 
-<p id="error-label" style="float: right; margin-top: 2em" hidden></p>
+<p class="demo-error-label"></p>
 <button type="button" id="run" class="btn btn-green">
     <i class="fas fa-play" style="margin-right: 0.3em"></i>Run
 </button>
-<pre class="demo-output" id="output">[...]</pre>
+<pre class="demo-style demo-output">[...]</pre>
