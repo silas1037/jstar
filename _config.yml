@@ -42,7 +42,10 @@ aux_links:
 aux_links_new_tab: true
 ga_tracking: UA-175825972-1
 
-highlighter: none
+markdown: kramdown
+kramdown:
+   syntax_highlighter_opts:
+      disable : true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
