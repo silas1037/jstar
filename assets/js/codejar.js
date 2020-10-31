@@ -13,7 +13,7 @@ function CodeJar(editor, highlight, opt = {}) {
     editor.style.overflowWrap = "break-word";
     editor.style.overflowY = "auto";
     editor.style.resize = "vertical";
-    editor.style.whiteSpace = "pre-wrap";
+    editor.style.whiteSpace = "nowrap";
     highlight(editor);
     const debounceHighlight = debounce(() => {
         const pos = save();
