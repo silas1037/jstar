@@ -23,7 +23,9 @@ This also is a runnable snippet.
 Take a look:
 
 <pre class='runnable-snippet'>
-print('Another snippet')
+for var i = 0; i < 3; i += 1 do
+	print('Another snippet')
+end
 </pre>
 
 This is a non-interactive snippet
