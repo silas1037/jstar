@@ -1,14 +1,13 @@
 // Customize <pre> code snippets
 pre[class*="language-"] {
     border-radius: 3px;
-    background-color: #f5f6fc !important;
     border: 1px solid #eeebee;
     padding: 0.6em !important;
 }
 
-code {
-    padding: 0;
-    border: 0;
+code[class*="language-"] {
+    padding: 0 !important;
+    border: none;
 }
 
 @import "docs.scss";
