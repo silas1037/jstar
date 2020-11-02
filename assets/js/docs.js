@@ -4,8 +4,11 @@
 window.addEventListener('load', () => {
 
 function escapeString(str) {
-    return str.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")
-              .replace(/'/g, "&#039;").replace(/</g, "&lt;");
+    return str.replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#039;");
 }
 
 (function codeSnippets() {
@@ -28,7 +31,7 @@ function escapeString(str) {
 
     // Set up all interactive snippets
     Array.from(document.querySelectorAll('.runnable-snippet')).forEach(function(snippetBlock) {
-        let code = snippetBlock.innerHTML;
+        let code = snippetBlock.innerText;
         
         // Wrap all the snippet elements in a div
         let snippetWrap = document.createElement('div');
@@ -47,7 +50,7 @@ function escapeString(str) {
         // Setup the buttons that control the code in the editor block
         let buttons = document.createElement('div');
         buttons.className = 'snippet-buttons';
-        snippetBlock.appendChild(buttons, snippetBlock.firstChild);
+        snippetBlock.appendChild(buttons);
 
         let runButton = document.createElement('button');
         runButton.className = 'fas fa-play snippet-button';
