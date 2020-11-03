@@ -32,6 +32,11 @@
     background: none;
     border: none;
     color: #5c5962 !important;
+    transition-duration: 0.4s;
+}
+
+.snippet-button:hover {
+    color: #3382cc !important;
 }
 
 .snippet-output {

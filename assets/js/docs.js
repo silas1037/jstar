@@ -54,13 +54,17 @@ function escapeString(str) {
 
         let runButton = document.createElement('button');
         runButton.className = 'fas fa-play snippet-button';
+        runButton.hidden = true;
         runButton.title = 'Run the code';
+        runButton.setAttribute('aria-label', runButton.title);
         runButton.addEventListener('click', () => runSnippet(snippetBlock, editor.toString()));
         buttons.appendChild(runButton);
 
         let resetButton = document.createElement('button');
         resetButton.className = 'fas fa-history snippet-button';
+        resetButton.hidden = true;
         resetButton.title = 'Undo changes';
+        runButton.setAttribute('aria-label', resetButton.title);
         resetButton.addEventListener('click', () => {
             let outputBlock = snippetBlock.querySelector('.snippet-output');
             if(outputBlock) outputBlock.remove();
