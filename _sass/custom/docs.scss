@@ -22,7 +22,6 @@
     margin-bottom: 0.25em;
     margin-left: auto;
     margin-right: 0;
-    cursor: pointer;
 }
 
 .snippet-editor {
@@ -34,6 +33,7 @@
     border: none;
     color: #5c5962 !important;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .snippet-button:hover {
