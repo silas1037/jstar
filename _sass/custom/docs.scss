@@ -4,6 +4,7 @@
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
     background-color: #f5f6fa;
     font-size: 13px;
+    tab-size: 4;
 }
 
 .snippet-style {
@@ -33,6 +34,7 @@
     border: none;
     color: #5c5962 !important;
     transition-duration: 0.4s;
+    cursor: pointer;
 }
 
 .snippet-button:hover {
